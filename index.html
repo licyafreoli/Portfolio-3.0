@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Lícya Oliveira — desenvolvimento full stack, interfaces, identidade visual e social media.">
+  <meta name="theme-color" content="#171914">
+  <title>Lícya Oliveira — Código, design e identidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171914'/%3E%3Cpath d='M15 14v36h23v-7H23V14z' fill='%23d9ff55'/%3E%3Cpath d='M35 14h14v7H35zM35 28h11v7H35z' fill='%23f4f0e6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Pular para o conteúdo</a>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__mark">L/O</div><div class="preloader__line"><span></span></div><p>PORTFOLIO · 2026</p></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="cursor cursor--dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor cursor--halo" id="cursorHalo" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand magnetic" href="#home" aria-label="Lícya Oliveira — início"><span class="brand__mark">LO</span><span class="brand__meta">DEV + DESIGN<br>CE / BR</span></a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#sobre" data-i18n="nav.about">Perfil</a><a href="#projetos" data-i18n="nav.projects">Projetos</a><a href="#design" data-i18n="nav.design">Design</a><a href="#contato" data-i18n="nav.contact">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <div class="language">
+        <button class="language__trigger magnetic" id="langBtn" type="button" aria-expanded="false" aria-controls="langMenu" aria-label="Selecionar idioma"><span id="currentLang">PT</span><span aria-hidden="true">⌄</span></button>
+        <div class="language__menu" id="langMenu" hidden>
+          <button type="button" data-lang="pt">PT · Português</button><button type="button" data-lang="en">EN · English</button><button type="button" data-lang="es">ES · Español</button><button type="button" data-lang="fr">FR · Français</button><button type="button" data-lang="it">IT · Italiano</button>
+        </div>
+      </div>
+      <button class="menu-toggle magnetic" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav"><span class="sr-only" data-i18n="a11y.menu">Abrir menu</span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação móvel" hidden>
+      <a href="#sobre"><span>01</span><span data-i18n="nav.about">Perfil</span></a><a href="#projetos"><span>02</span><span data-i18n="nav.projects">Projetos</span></a><a href="#habilidades"><span>03</span><span data-i18n="nav.skills">Habilidades</span></a><a href="#design"><span>04</span><span data-i18n="nav.design">Design</span></a><a href="#contato"><span>05</span><span data-i18n="nav.contact">Contato</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="hero__eyebrow reveal reveal--top"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.availability">Disponível para novas oportunidades</span></div>
+      <h1 class="hero__title" id="heroTitle" aria-label="Lícya Oliveira"><span class="hero__line hero__line--one" data-parallax="-0.025">LÍCYA</span><span class="hero__line hero__line--two" data-parallax="0.035">OLIVEIRA</span></h1>
+      <div class="hero__composition" aria-hidden="true">
+        <figure class="hero-card hero-card--one cursor-float" data-depth="18"><img src="imgs/Untitled design - 6.png" alt=""><figcaption>IDENTITY / 01</figcaption></figure>
+        <figure class="hero-card hero-card--two cursor-float" data-depth="-12"><img src="imgs/cm-pisos-preview.jpg" alt=""><figcaption>WEB / 02</figcaption></figure>
+      </div>
+      <div class="hero__footer reveal">
+        <p class="hero__intro" data-i18n="hero.intro">Desenvolvedora full stack e designer. Transformo estratégia em experiências digitais claras, úteis e visualmente marcantes.</p>
+        <div class="hero__roles" aria-label="Áreas de atuação"><span>FULL-STACK</span><span>UI/UX</span><span>BRANDING</span></div>
+        <a class="round-link magnetic" href="#projetos" aria-label="Ver projetos"><span data-i18n="hero.cta">Explorar trabalho</span><span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero__scribble" aria-hidden="true"><svg viewBox="0 0 180 84" fill="none"><path d="M5 61C31 22 55 71 78 36C92 15 105 55 123 28C138 8 150 29 175 10"/><path d="M112 65c18 7 38 7 58-2"/></svg></div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker__track"><span>CODE WITH INTENT</span><i>✦</i><span>DESIGN WITH CONTEXT</span><i>✦</i><span>BUILD WITH CLARITY</span><i>✦</i><span>CODE WITH INTENT</span><i>✦</i><span>DESIGN WITH CONTEXT</span><i>✦</i><span>BUILD WITH CLARITY</span><i>✦</i></div></div>
+
+    <section class="profile section-pad" id="sobre" aria-labelledby="aboutTitle">
+      <div class="section-index reveal"><span>01</span><span data-i18n="about.kicker">Perfil</span></div>
+      <div class="profile__grid">
+        <h2 class="display-title reveal" id="aboutTitle"><span data-i18n="about.title1">Entre lógica</span><br><em data-i18n="about.title2">e sensibilidade.</em></h2>
+        <div class="profile__copy reveal"><p data-i18n="about.description">Há mais de 5 anos ajudo marcas a se posicionarem: construo identidades visuais, desenvolvo sites que trabalham a favor do negócio e crio conteúdo que aproxima pessoas e marcas.</p><p class="profile__note" data-i18n="about.note">Gosto do ponto em que tecnologia, estética e comunicação deixam de ser áreas separadas e passam a resolver o mesmo problema.</p></div>
+        <dl class="profile__facts reveal"><div><dt data-i18n="about.fact1.label">Base</dt><dd>Ceará, Brasil</dd></div><div><dt data-i18n="about.fact2.label">Atuação</dt><dd data-i18n="about.fact2.value">Desenvolvimento + Design</dd></div><div><dt data-i18n="about.fact3.label">Foco</dt><dd data-i18n="about.fact3.value">Produtos digitais e marcas</dd></div></dl>
+      </div>
+    </section>
+
+    <section class="duality" aria-label="Duas áreas de atuação">
+      <article class="duality-card duality-card--build reveal"><span class="duality-card__number">A / 01</span><p class="duality-card__eyebrow">BUILD</p><h2 data-i18n="duality.dev.title">Código que<br>organiza ideias.</h2><p data-i18n="duality.dev.desc">Interfaces responsivas, aplicações, APIs e estruturas de dados pensadas para funcionar com clareza.</p><a href="#projetos"><span data-i18n="duality.dev.cta">Ver desenvolvimento</span><span aria-hidden="true">↗</span></a></article>
+      <article class="duality-card duality-card--brand reveal"><span class="duality-card__number">B / 02</span><p class="duality-card__eyebrow">BRAND</p><h2 data-i18n="duality.design.title">Design que<br>cria presença.</h2><p data-i18n="duality.design.desc">Identidades, interfaces e conteúdo visual que tornam cada projeto reconhecível e coerente.</p><a href="#design"><span data-i18n="duality.design.cta">Ver direção visual</span><span aria-hidden="true">↗</span></a></article>
+    </section>
+
+    <section class="projects section-pad" id="projetos" aria-labelledby="projectsTitle">
+      <div class="section-index section-index--light reveal"><span>02</span><span data-i18n="projects.kicker">Trabalhos selecionados</span></div>
+      <div class="section-heading section-heading--light"><h2 class="display-title reveal" id="projectsTitle"><span data-i18n="projects.title">Projetos que</span><br><em data-i18n="projects.title2">ganharam forma.</em></h2><p class="reveal" data-i18n="projects.description">Uma seleção curta de produtos digitais e entregas em que estrutura, interface e objetivo caminham juntos.</p></div>
+      <div class="project-filters reveal" role="group" aria-label="Filtrar projetos" data-i18n-aria-label="projects.filter.label"><button type="button" class="is-active" data-filter="all" aria-pressed="true" data-i18n="projects.filter.all">Todos</button><button type="button" data-filter="web" aria-pressed="false">Web</button><button type="button" data-filter="mobile" aria-pressed="false">Mobile</button></div>
+      <div class="project-index">
+        <article class="project-row reveal" data-category="mobile"><a href="https://github.com/vinicius05-lab/ReisProject" target="_blank" rel="noopener noreferrer" aria-label="Abrir Reis Marcas e Patentes no GitHub" data-i18n-aria-label="projects.reis.aria"><span class="project-row__number">01</span><div class="project-row__title"><h3 data-i18n="projects.reis.title">Reis Marcas e Patentes</h3><p data-i18n="projects.reis.meta">Aplicativo · Projeto colaborativo</p></div><p class="project-row__description" data-i18n="projects.reis.desc">Cadastro, autenticação e acompanhamento de processos para clientes, colaboradores e parceiros.</p><div class="project-row__stack"><span>Flutter</span><span>Dart</span><span>Mobile</span></div><span class="project-row__arrow" aria-hidden="true">↗</span><div class="project-row__preview project-row__preview--reis"><img src="imgs/reis-logo.png" alt=""></div></a></article>
+        <article class="project-row reveal" data-category="web"><a href="https://licyafreoli.github.io/cmpisos/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site CM Pisos" data-i18n-aria-label="projects.cmpisos.aria"><span class="project-row__number">02</span><div class="project-row__title"><h3>CM Pisos</h3><p data-i18n="projects.cmpisos.meta">Site · Experiência publicada</p></div><p class="project-row__description" data-i18n="projects.cmpisos.desc">Catálogo pesquisável, filtros de produtos, paginação, FAQ e contato comercial integrado.</p><div class="project-row__stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><span class="project-row__arrow" aria-hidden="true">↗</span><div class="project-row__preview"><img src="imgs/cm-pisos-preview.jpg" alt="Ambiente corporativo com piso em carpete" data-i18n-alt="projects.cmpisos.alt"></div></a></article>
+        <article class="project-row reveal" data-category="mobile"><a href="https://github.com/licyafreoli/ReisProject-master" target="_blank" rel="noopener noreferrer" aria-label="Abrir a versão consolidada do Reis Project no GitHub" data-i18n-aria-label="projects.reisCopy.aria"><span class="project-row__number">03</span><div class="project-row__title"><h3 data-i18n="projects.reisCopy.title">Reis Project</h3><p data-i18n="projects.reisCopy.meta">Aplicativo · Versão consolidada</p></div><p class="project-row__description" data-i18n="projects.reisCopy.desc">Fluxos de cadastro, perfil, comunicação e gestão visual de processos em uma interface multiplataforma.</p><div class="project-row__stack"><span>Flutter</span><span>Dart</span><span>UI</span></div><span class="project-row__arrow" aria-hidden="true">↗</span><div class="project-row__preview project-row__preview--reis project-row__preview--blue"><img src="imgs/reis-logo.png" alt=""></div></a></article>
+      </div>
+    </section>
+
+    <section class="capabilities section-pad" id="habilidades" aria-labelledby="skillsTitle">
+      <div class="section-index reveal"><span>03</span><span data-i18n="skills.kicker">Sistema de trabalho</span></div>
+      <div class="capabilities__header"><h2 class="display-title reveal" id="skillsTitle"><span data-i18n="skills.title">Ferramentas são</span><br><em data-i18n="skills.title2">meios, não o fim.</em></h2><p class="reveal" data-i18n="skills.description">Escolho tecnologia e linguagem visual de acordo com o problema — e conecto as duas quando isso melhora o resultado.</p></div>
+      <div class="capability-grid">
+        <article class="capability reveal"><p class="capability__label">01 / FRONTEND</p><h3 data-i18n="skills.frontend.title">Interfaces & experiência</h3><p>HTML · CSS · JavaScript · React · Next.js · Tailwind CSS · Responsive UI · Accessibility</p></article>
+        <article class="capability reveal"><p class="capability__label">02 / BACKEND</p><h3 data-i18n="skills.backend.title">Sistemas & integrações</h3><p>Python · Django · Flask · FastAPI · REST APIs · Authentication · Integrations · C</p></article>
+        <article class="capability reveal"><p class="capability__label">03 / DATA</p><h3 data-i18n="skills.data.title">Dados & estrutura</h3><p>PostgreSQL · MySQL · SQLite · SQL · Data modeling · Migrations · CRUD · Performance</p></article>
+        <article class="capability reveal"><p class="capability__label">04 / VISUAL</p><h3 data-i18n="skills.design.title">Design & identidade</h3><p>Figma · Photoshop · Illustrator · Canva · Visual Identity · Social Media · UI/UX</p></article>
+      </div>
+    </section>
+
+    <section class="design-lab section-pad" id="design" aria-labelledby="designTitle">
+      <div class="section-index reveal"><span>04</span><span data-i18n="design.kicker">Laboratório visual</span></div>
+      <div class="section-heading"><h2 class="display-title reveal" id="designTitle"><span data-i18n="design.title">Identidades em</span><br><em data-i18n="design.title2">movimento.</em></h2><p class="reveal" data-i18n="design.description">Projetos de identidade visual e social media apresentados como fragmentos de um arquivo criativo.</p></div>
+      <div class="design-grid">
+        <article class="design-card design-card--wide reveal"><button class="design-card__image" type="button" data-lightbox="imgs/Untitled design - 2.png" data-alt="Aurora Estúdio de Beleza" aria-label="Ampliar projeto Aurora Estúdio de Beleza"><img src="imgs/Untitled design - 2.png" alt="Aurora Estúdio de Beleza" loading="lazy"><span aria-hidden="true">+</span></button><div><p>01 · SOCIAL MEDIA</p><h3>Aurora Estúdio de Beleza</h3><a href="https://instagram.com/auroraestudiodebeleza" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></article>
+        <article class="design-card reveal"><button class="design-card__image" type="button" data-lightbox="imgs/Untitled design - 5.png" data-alt="Reis Marcas e Patentes" aria-label="Ampliar projeto Reis Marcas e Patentes"><img src="imgs/Untitled design - 5.png" alt="Reis Marcas e Patentes" loading="lazy"><span aria-hidden="true">+</span></button><div><p>02 · BRANDING</p><h3>Reis Marcas e Patentes</h3><a href="https://instagram.com/reismarcasepatentes" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></article>
+        <article class="design-card reveal"><button class="design-card__image" type="button" data-lightbox="imgs/Untitled design - 4.png" data-alt="Meta Hair Clinic" aria-label="Ampliar projeto Meta Hair Clinic"><img src="imgs/Untitled design - 4.png" alt="Meta Hair Clinic" loading="lazy"><span aria-hidden="true">+</span></button><div><p>03 · SOCIAL MEDIA</p><h3>Meta Hair Clinic</h3><a href="https://instagram.com/metahairclinic" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></article>
+        <article class="design-card design-card--tall reveal"><button class="design-card__image" type="button" data-lightbox="imgs/Untitled design - 6.png" data-alt="Fruttiva Branding" aria-label="Ampliar projeto Fruttiva Branding"><img src="imgs/Untitled design - 6.png" alt="Fruttiva Branding" loading="lazy"><span aria-hidden="true">+</span></button><div><p>04 · IDENTIDADE VISUAL</p><h3>Fruttiva Branding</h3></div></article>
+        <article class="design-card design-card--wide reveal"><button class="design-card__image" type="button" data-lightbox="imgs/Untitled design - 7.jpeg" data-alt="Águas Clara Instagram" aria-label="Ampliar projeto Águas Clara Instagram"><img src="imgs/Untitled design - 7.jpeg" alt="Águas Clara Instagram" loading="lazy"><span aria-hidden="true">+</span></button><div><p>05 · SOCIAL MEDIA</p><h3 data-i18n="design.work5">Instagram do Zero a Resultados</h3><a href="https://www.instagram.com/aguasclarapiscina/reels/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></article>
+        <article class="design-card reveal"><button class="design-card__image" type="button" data-lightbox="imgs/Untitled design - 3.png" data-alt="Grupo Prioridade" aria-label="Ampliar projeto Grupo Prioridade"><img src="imgs/Untitled design - 3.png" alt="Grupo Prioridade" loading="lazy"><span aria-hidden="true">+</span></button><div><p>06 · SOCIAL MEDIA</p><h3>Grupo Prioridade</h3><a href="https://instagram.com/grupoprioridade" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></article>
+      </div>
+    </section>
+
+    <section class="now-strip" aria-label="Interesses atuais"><div class="now-strip__label"><span class="status-dot" aria-hidden="true"></span><span data-i18n="now.label">AGORA</span></div><p data-i18n="now.text">Criando experiências digitais, estudando novas formas de interação e aproximando desenvolvimento de direção visual.</p><span class="now-strip__stamp">CE—BR / 2026</span></section>
+
+    <section class="contact section-pad" id="contato" aria-labelledby="contactTitle">
+      <div class="section-index section-index--light reveal"><span>05</span><span data-i18n="contact.kicker">Próximo capítulo</span></div>
+      <div class="contact__intro"><h2 class="display-title reveal" id="contactTitle"><span data-i18n="contact.title">Tem uma ideia?</span><br><em data-i18n="contact.title2">Vamos dar forma.</em></h2><a class="contact__email reveal" href="mailto:r.licyaoliveira@gmail.com">r.licyaoliveira@gmail.com <span aria-hidden="true">↗</span></a></div>
+      <div class="contact__grid">
+        <div class="contact__details reveal"><div><span data-i18n="contact.location">Localização</span><p>Ceará, Brasil</p></div><div><span data-i18n="contact.phone">Telefone</span><p>+55 85 986067525</p></div><div><span data-i18n="contact.social">Social</span><p><a href="https://instagram.com/freolitech" target="_blank" rel="noopener noreferrer">@freolitech ↗</a></p></div><div class="contact__links"><a href="https://github.com/licyafreoli" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/licyaoliveira" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
+        <form class="contact-form reveal" id="contactForm"><div class="field"><label for="formName" data-i18n="contact.form.name">Seu nome</label><input id="formName" name="name" type="text" autocomplete="name" required></div><div class="field"><label for="formEmail">Email</label><input id="formEmail" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="formMessage" data-i18n="contact.form.message">Conte um pouco sobre o projeto</label><textarea id="formMessage" name="message" rows="4" required></textarea></div><button class="submit-button magnetic" type="submit"><span data-i18n="contact.form.send">Enviar mensagem</span><span aria-hidden="true">↗</span></button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>© 2026 LÍCYA OLIVEIRA</p><button class="easter-egg" id="lumosBtn" type="button" aria-expanded="false" aria-controls="magicNote"><span aria-hidden="true">✦</span> LUMOS</button><p>DESIGNED + BUILT WITH INTENT</p><div class="magic-note" id="magicNote" hidden><span aria-hidden="true">✦</span><p data-i18n="magic.text">Mapa desbloqueado: toda boa ideia começa com curiosidade.</p></div></footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada" hidden><button class="lightbox__close" id="lightboxClose" type="button" aria-label="Fechar visualização">×</button><img id="lightboxImage" src="" alt=""></div>
+</body>
+</html>
